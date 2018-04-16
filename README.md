@@ -2,6 +2,10 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2000px-Home_Assistant_Logo.svg.png" height="200">
 </p>
 
+<p align="center">
+    <a href="https://travis-ci.org/nathan-van-der-werf/home-assistant"><img src="https://travis-ci.org/nathan-van-der-werf/home-assistant.svg?branch=master"/></a>
+</p>
+
 [Home Assistant](https://www.home-assistant.io/) configuration of [Nathan van der Werf](https://github.com/nathan-van-der-werf).
 
 # Devices
