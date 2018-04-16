@@ -7,7 +7,7 @@ homeassistant:
   longitude: !secret longitude
   elevation: 0
   unit_system: metric
-  time_zone: !secret time_zone
+  time_zone: Europe/Amsterdam
   customize: !include includes/customize.yaml
 
 logger:
