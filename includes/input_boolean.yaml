@@ -1,0 +1,46 @@
+##############################################################
+## Input Boolean
+##############################################################
+
+  disable_home_away:
+    name: Disable Home / Away Mode
+    icon: mdi:map-marker-off
+
+  vacation_mode:
+    name: Vacation Mode
+    icon: mdi:airplane
+
+  bedtime:
+    name: Bedtime
+    initial: off
+    icon: mdi:hotel
+
+  disable_voice_greeting:
+    name: Disable Audio Notifications
+    icon: mdi:speaker-off
+
+  nathan_greeting:
+    name: Nathan Greeting Enabled
+
+  marianne_greeting:
+    name: Marianne Greeting Enabled
+
+  manual_nathan_home:
+    name: Manually set Nathan Home
+    initial: off
+    icon: mdi:home-map-marker
+
+  manual_marianne_home:
+    name: Manually set Marianne Home
+    initial: off
+    icon: mdi:home-map-marker
+
+  manual_nathan_away:
+    name: Manually set Nathan Away
+    initial: off
+    icon: mdi:map-marker-minus
+
+  manual_marianne_away:
+    name: Manually set Marianne Away
+    initial: off
+    icon: mdi:map-marker-minus

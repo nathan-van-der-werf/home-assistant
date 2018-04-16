@@ -1,0 +1,35 @@
+##########################################################
+## Device Trackers
+##########################################################
+
+  device_tracker.nathan_mobile_phone:
+    icon: mdi:human-male
+
+  device_tracker.marianne_mobile_phone:
+    icon: mdi:human-female
+
+  device_tracker.philips_hue_bridge:
+    icon: mdi:lightbulb-outline
+
+  device_tracker.nathan_battlestation:
+    icon: mdi:desktop-tower
+
+  device_tracker.marianne_hp:
+    icon: mdi:laptop
+
+  device_tracker.lg_tv:
+    icon: mdi:television
+
+
+##########################################################
+## All Groups / Troubleshooting
+##########################################################
+
+  group.all_automations:
+    hidden: false
+  group.all_devices:
+    hidden: false
+  group.all_lights:
+    hidden: false
+  group.all_scripts:
+    hidden: false

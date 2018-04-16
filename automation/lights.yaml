@@ -1,0 +1,51 @@
+#################################################################
+## Turn on Nathan Study Room Lights when Computer is on
+#################################################################
+
+- alias: Lights - Turn on when Nathan computer is connected
+  trigger:
+    platform: state
+    entity_id: device_tracker.nathan_battlestation
+    to: 'home'
+  action:
+    - service: light.turn_on
+      entity_id: light.nathan_office_lights
+
+#################################################################
+## Turn off Nathan Study Room Lights when Computer is off
+#################################################################
+
+- alias: Lights - Turn off when Nathan computer is disconnected
+  trigger:
+    platform: state
+    entity_id: device_tracker.nathan_battlestation
+    to: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: light.nathan_office_lights
+
+#################################################################
+## Turn on Marianne Study Room Lights when Computer is on
+#################################################################
+
+- alias: Lights - Turn on when Marianne computer is connected
+  trigger:
+    platform: state
+    entity_id: device_tracker.marianne_battlestation
+    to: 'home'
+  action:
+    - service: light.turn_on
+      entity_id: light.marianne_office_lights
+
+#################################################################
+## Turn off Marianne Study Room Lights when Computer is off
+#################################################################
+
+- alias: Lights - Turn off when Marianne computer is disconnected
+  trigger:
+    platform: state
+    entity_id: device_tracker.marianne_battlestation
+    to: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: light.marianne_office_lights

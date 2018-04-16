@@ -1,0 +1,62 @@
+#################################################################
+## Sensors
+#################################################################
+
+- platform: template
+  sensors:
+    nathan_battlestation:
+      value_template: '{% if is_state("device_tracker.nathan_battlestation", "home") %}on{% else %}off{% endif %}'
+      friendly_name: Nathan Battlestation
+      icon_template: mdi:desktop-tower
+    marianne_battlestation:
+      value_template: '{% if is_state("device_tracker.marianne_battlestation", "home") %}on{% else %}off{% endif %}'
+      friendly_name: Marianne Battlestation
+      icon_template: mdi:desktop-tower
+    philips_hue_bridge:
+      value_template: '{% if is_state("device_tracker.philips_hue_bridge", "home") %}on{% else %}off{% endif %}'
+      friendly_name: Philips Hue Bridge
+      icon_template: mdi:lightbulb-outline
+    lg_tv:
+      value_template: '{% if is_state("device_tracker.lg_tv", "home") %}on{% else %}off{% endif %}'
+      friendly_name: LG TV
+      icon_template: mdi:television
+    nathan_mobile_battery:
+      value_template: '{{ states.device_tracker.nathan_mobile_phone.attributes.battery }}'
+      friendly_name: 'Nathan Mobile Sensor'
+      unit_of_measurement: '%'
+      icon_template: >
+        {% set battery_level = states.device_tracker.nathan_mobile_phone.attributes.battery | default(0) | int %}
+        {% set battery_round = (battery_level / 10) | int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+    marianne_mobile_battery:
+      value_template: '{{ states.device_tracker.marianne_mobile_phone.attributes.battery }}'
+      friendly_name: 'Marianne Mobile Sensor'
+      unit_of_measurement: '%'
+      icon_template: >
+        {% set battery_level = states.device_tracker.marianne_mobile_phone.attributes.battery | default(0) | int %}
+        {% set battery_round = (battery_level / 10) | int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+
+- platform: synologydsm
+  host: !secret synology_ip
+  username: !secret synology_username
+  password: !secret synology_password
+  monitored_conditions:
+    - volume_status
+    - cpu_total_load
+    - memory_real_usage
+    - disk_smart_status
+    - volume_percentage_used
+    - volume_disk_temp_avg

@@ -1,0 +1,163 @@
+##########################################################
+## Views
+##########################################################
+
+  default_view:
+    view: true
+    icon: mdi:home
+    entities:
+      - group.automation_on_demand
+      - group.household
+      - group.battlestations
+      - group.interior_lights
+
+  living:
+    name: Living
+    view: true
+    icon: mdi:sofa
+    entities:
+      - media_player.cast
+
+  dining:
+    name: Dining
+    view: true
+    icon: mdi:silverware-variant
+    entities:
+      - group.dining_room
+
+  gym:
+    name: Gym
+    view: true
+    icon: mdi:dumbbell
+    entities:
+      - media_player.gym
+
+  office:
+    name: Office
+    view: true
+    icon: mdi:desktop-tower
+    entities:
+      - group.nathan_office
+      - group.marianne_office
+
+  media:
+    name: Media
+    view: yes
+    icon: mdi:play-circle-outline
+    entities:
+      - group.media_player
+      - group.sonos
+
+  automation:
+    name: Automation
+    view: true
+    icon: mdi:robot
+    entities:
+        - group.automation_on_demand
+        - group.location_controls
+        - group.automation_override
+
+  sensors:
+    name: Sensors
+    view: true
+    icon: mdi:gauge
+    entities:
+      - group.household
+      - group.battery_levels
+      - group.nas
+
+  troubleshooting:
+    name: Troubleshooting
+    view: yes
+    icon: mdi:none
+    entities:
+      - group.all_automations
+      - group.all_devices
+      - group.all_input_boolean
+      - group.all_lights
+      - group.all_scripts
+
+##########################################################
+## Hidden Control Switch Groups
+##########################################################
+
+  Automation On Demand:
+    control: hidden
+    entities:
+      - input_boolean.bedtime
+
+  Interior Lights:
+    control: hidden
+    entities:
+      - light.dining_room_lights
+      - light.nathan_office_lights
+      - light.marianne_office_lights
+
+  Dining Room:
+    control: hidden
+    entities:
+      - light.dining_room_lights
+
+  Automation Override:
+    control: hidden
+    entities:
+      - input_boolean.disable_home_away
+      - input_boolean.disable_voice_greeting
+
+  Location Controls:
+    control: hidden
+    entities:
+      - input_boolean.vacation_mode
+      - input_boolean.manual_nathan_home
+      - input_boolean.manual_marianne_home
+      - input_boolean.manual_nathan_away
+      - input_boolean.manual_marianne_away
+
+##########################################################
+## Groups
+##########################################################
+
+  Living Room:
+    - sensor.lg_tv
+
+  Household:
+    - device_tracker.nathan_mobile_phone
+    - device_tracker.marianne_mobile_phone
+
+  Nathan Office:
+    entities:
+      - sensor.nathan_battlestation
+      - light.nathan_office_lights
+
+  Marianne Office:
+    entities:
+      - sensor.marianne_battlestation
+      - light.marianne_office_lights
+
+  Battlestations:
+    - sensor.nathan_battlestation
+    - sensor.marianne_battlestation
+
+  All Input Boolean:
+    - input_boolean.nathan_greeting
+    - input_boolean.marianne_greeting
+    - input_boolean.disable_voice_greeting
+    - input_boolean.manual_nathan_home
+    - input_boolean.manual_marianne_home
+    - input_boolean.manual_nathan_away
+    - input_boolean.manual_marianne_away
+
+  Battery Levels:
+    - sensor.nathan_mobile_battery
+    - sensor.marianne_mobile_battery
+
+  NAS:
+    - sensor.status_volume_1
+    - sensor.cpu_load_total
+    - sensor.memory_usage_real
+    - sensor.status_smart_sda
+    - sensor.status_smart_sdb
+    - sensor.status_smart_sdc
+    - sensor.status_smart_sdd
+    - sensor.volume_used_volume_1
+    - sensor.average_disk_temp_volume_1

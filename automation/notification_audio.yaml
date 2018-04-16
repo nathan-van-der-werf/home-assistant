@@ -1,0 +1,64 @@
+#################################################################
+## Audio Notification Automations
+#################################################################
+
+- alias: Notification Audio - Welcome Home Nathan
+  trigger:
+    - platform: state
+      entity_id: device_tracker.nathan_mobile_phone
+      from: 'not_home'
+      to: 'home'
+
+  condition:
+    - condition: state
+      entity_id: input_boolean.nathan_greeting
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.disable_voice_greeting
+      state: 'off'
+    - condition: time
+      after: '09:00'
+      before: '23:00'
+
+  action:
+    - service: script.turn_on
+      entity_id: script.say
+      data:
+        variables:
+          master: 'media_player.gym'
+          where: 'media_player.gym'
+          volume: '0.5'
+          what: 'Welcome home Nathan'
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.nathan_greeting
+
+
+- alias: Notification Audio - Welcome Home Marianne
+  trigger:
+    - platform: state
+      entity_id: device_tracker.marianne_mobile_phone
+      from: 'not_home'
+      to: 'home'
+
+  condition:
+    - condition: state
+      entity_id: input_boolean.marianne_greeting
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.disable_voice_greeting
+      state: 'off'
+    - condition: time
+      after: '09:00'
+      before: '23:00'
+
+  action:
+    - service: script.turn_on
+      entity_id: script.say
+      data:
+        variables:
+          master: 'media_player.gym'
+          where: 'media_player.gym'
+          volume: '0.5'
+          what: 'Welcome home Marianne'
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.marianne_greeting

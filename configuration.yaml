@@ -1,0 +1,76 @@
+#################################################################
+## Home Assistant
+#################################################################
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 0
+  unit_system: metric
+  time_zone: !secret time_zone
+  customize: !include includes/customize.yaml
+
+logger:
+  default: debug
+frontend:
+updater:
+  reporting: false
+sun:
+# conversation:
+discovery:
+  ignore:
+    - sonos
+map:
+tts:
+  - platform: google
+config:
+history:
+
+# Web UI interface
+http:
+  api_password: !secret http_password
+  ssl_certificate: /config/certificate/cert.pem
+  ssl_key: /config/certificate/privkey.pem
+  base_url: !secret base_url
+  ip_ban_enabled: false
+  login_attempts_threshold: 5
+
+#################################################################
+## Components
+#################################################################
+
+hue:
+  bridges:
+    - host: !secret hue_bridge_host
+      allow_hue_groups: false
+      allow_unreachable: true
+
+media_player:
+  - platform: sonos
+    hosts: !secret media_player_sonos_hosts
+  - platform: cast
+    host: !secret media_player_cast_hosts
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: !secret device_tracker_nmap_tracker_hosts
+    home_interval: 1
+    scan_options: "-F --host-timeout 1s"
+  - platform: gpslogger
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+  api_key: !secret google_assistant_api_key
+
+#################################################################
+## Includes
+#################################################################
+automation: !include_dir_merge_list automation
+input_boolean: !include includes/input_boolean.yaml
+sensor: !include includes/sensors.yaml
+group: !include includes/groups.yaml
+light: !include includes/light_groups.yaml
+script: !include includes/scripts.yaml
+zone: !include includes/zones.yaml

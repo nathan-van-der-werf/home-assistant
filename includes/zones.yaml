@@ -1,0 +1,15 @@
+#################################################################
+## Zones
+#################################################################
+
+  - name: !secret zone_nathan_work_name
+    latitude: !secret zone_nathan_work_latitude
+    longitude: !secret zone_nathan_work_longitude
+    radius: 100
+    icon: mdi:briefcase
+
+  - name: !secret zone_marianne_work_name
+    latitude: !secret zone_marianne_work_latitude
+    longitude: !secret zone_marianne_work_longitude
+    radius: 100
+    icon: mdi:briefcase

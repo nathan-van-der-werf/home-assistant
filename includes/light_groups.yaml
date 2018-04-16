@@ -1,0 +1,23 @@
+#################################################################
+## Light Groups
+#################################################################
+
+  - platform: group
+    name: Dining Room Lights
+    entities:
+      - light.dining_table_lamp_1
+      - light.dining_table_lamp_3
+
+  - platform: group
+    name: Nathan Office Lights
+    entities:
+      - light.grono_nathan_l
+      - light.grono_nathan_r
+      - light.rutbo_1
+      - light.rutbo_3
+
+  - platform: group
+    name: Marianne Office Lights
+    entities:
+      - light.grono_marianne_l
+      - light.grono_marianne_r
