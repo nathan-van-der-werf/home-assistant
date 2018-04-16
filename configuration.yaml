@@ -12,7 +12,6 @@ homeassistant:
 
 logger:
   default: debug
-frontend:
 updater:
   reporting: false
 sun:
@@ -25,6 +24,9 @@ tts:
   - platform: google
 config:
 history:
+
+frontend:
+  javascript_version: latest
 
 # Web UI interface
 http:
