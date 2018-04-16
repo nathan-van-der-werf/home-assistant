@@ -29,8 +29,8 @@ history:
 # Web UI interface
 http:
   api_password: !secret http_password
-  ssl_certificate: /config/certificate/cert.pem
-  ssl_key: /config/certificate/privkey.pem
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   base_url: !secret base_url
   ip_ban_enabled: false
   login_attempts_threshold: 5
