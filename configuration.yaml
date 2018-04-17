@@ -69,7 +69,7 @@ google_assistant:
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list includes/device_tracker
 input_boolean: !include includes/input_boolean.yaml
-sensor: !include includes/sensors.yaml
+sensor: !include_dir_merge_list includes/sensors
 group: !include includes/groups.yaml
 light: !include includes/light_groups.yaml
 script: !include includes/scripts.yaml
