@@ -15,7 +15,6 @@ tts
 
 .config_entries.json
 .HA_VERSION
-docker-compose.yml
 entity_registry.yaml
 ip_bans.yaml
 known_devices.yaml
