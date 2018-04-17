@@ -3,10 +3,10 @@
 ##########################################################
 
   device_tracker.nathan_mobile_phone:
-    icon: mdi:human-male
+    entity_picture: /local/images/nathan-entity-picture.jpg
 
   device_tracker.marianne_mobile_phone:
-    icon: mdi:human-female
+    entity_picture: /local/images/marianne-entity-picture.jpg
 
   device_tracker.philips_hue_bridge:
     icon: mdi:lightbulb-outline
