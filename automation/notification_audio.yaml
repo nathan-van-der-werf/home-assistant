@@ -1,7 +1,3 @@
-#################################################################
-## Audio Notification Automations
-#################################################################
-
 - alias: Notification Audio - Welcome Home Nathan
   trigger:
     - platform: state

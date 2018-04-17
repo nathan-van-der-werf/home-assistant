@@ -1,7 +1,3 @@
-##############################################################
-## Input Boolean
-##############################################################
-
   disable_home_away:
     name: Disable Home / Away Mode
     icon: mdi:map-marker-off

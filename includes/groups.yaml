@@ -1,7 +1,3 @@
-##########################################################
-## Views
-##########################################################
-
   default_view:
     view: true
     icon: mdi:home
@@ -77,10 +73,6 @@
       - group.all_lights
       - group.all_scripts
 
-##########################################################
-## Hidden Control Switch Groups
-##########################################################
-
   Automation On Demand:
     control: hidden
     entities:
@@ -112,10 +104,6 @@
       - input_boolean.manual_marianne_home
       - input_boolean.manual_nathan_away
       - input_boolean.manual_marianne_away
-
-##########################################################
-## Groups
-##########################################################
 
   Living Room:
     - sensor.lg_tv

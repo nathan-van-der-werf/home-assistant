@@ -1,7 +1,3 @@
-##########################################################
-## Device Trackers
-##########################################################
-
   device_tracker.nathan_mobile_phone:
     entity_picture: /local/images/nathan-entity-picture.jpg
 
@@ -20,16 +16,14 @@
   device_tracker.lg_tv:
     icon: mdi:television
 
-
-##########################################################
-## All Groups / Troubleshooting
-##########################################################
-
   group.all_automations:
     hidden: false
+
   group.all_devices:
     hidden: false
+
   group.all_lights:
     hidden: false
+
   group.all_scripts:
     hidden: false

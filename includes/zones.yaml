@@ -1,7 +1,3 @@
-#################################################################
-## Zones
-#################################################################
-
   - name: !secret zone_nathan_work_name
     latitude: !secret zone_nathan_work_latitude
     longitude: !secret zone_nathan_work_longitude

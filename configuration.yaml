@@ -1,6 +1,3 @@
-#################################################################
-## Home Assistant
-#################################################################
 homeassistant:
   name: Home
   latitude: !secret latitude
@@ -13,22 +10,25 @@ homeassistant:
 
 logger:
   default: debug
+
 updater:
   reporting: false
+
 sun:
-# conversation:
-discovery:
-  ignore:
-    - sonos
+
 map:
 
 config:
+
 history:
 
 frontend:
   javascript_version: latest
 
-# Web UI interface
+discovery:
+  ignore:
+    - sonos
+
 http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
@@ -36,10 +36,6 @@ http:
   base_url: !secret base_url
   ip_ban_enabled: true
   login_attempts_threshold: 3
-
-#################################################################
-## Components
-#################################################################
 
 hue:
   bridges:
@@ -53,9 +49,6 @@ google_assistant:
   access_token: !secret google_assistant_access_token
   api_key: !secret google_assistant_api_key
 
-#################################################################
-## Includes
-#################################################################
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list includes/device_tracker
 media_player: !include_dir_merge_list includes/media_players

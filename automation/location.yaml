@@ -1,7 +1,3 @@
-##########################################################
-## Set Nathan Away after 1 Min
-##########################################################
-
 - alias: Location - Set Nathan Away after 1 Mins
 
   trigger:
@@ -18,10 +14,6 @@
     - service: homeassistant.turn_on
       entity_id:
         - input_boolean.nathan_greeting
-
-##########################################################
-## Set Marianne Away after 1 Min
-##########################################################
 
 - alias: Location - Set Marianne Away after 1 Mins
 
@@ -40,10 +32,6 @@
       entity_id:
         - input_boolean.marianne_greeting
 
-##########################################################
-## Manually Set Nathan Home
-##########################################################
-
 - alias: Location - Manually Set Nathan Home
 
   trigger:
@@ -57,10 +45,6 @@
       data:
         dev_id: nathan_mobile_phone
         location_name: 'home'
-
-##########################################################
-## Reset Manually Set Nathan Home Switch
-##########################################################
 
 - alias: Location - Reset Nathan Home Switch
 
@@ -78,10 +62,6 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.manual_nathan_home
 
-##########################################################
-## Manually Set Nathan Away
-##########################################################
-
 - alias: Location - Manually Set Nathan Away
 
   trigger:
@@ -95,10 +75,6 @@
       data:
         dev_id: nathan_mobile_phone
         location_name: 'not_home'
-
-##########################################################
-## Reset Manually Set Nathan Away Switch
-##########################################################
 
 - alias: Location - Reset Nathan Away Switch
 
@@ -116,11 +92,6 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.manual_nathan_away
 
-
-##########################################################
-## Manually Set Marianne Home
-##########################################################
-
 - alias: Location - Manually Set Marianne Home
 
   trigger:
@@ -134,10 +105,6 @@
       data:
         dev_id: marianne_mobile_phone
         location_name: 'home'
-
-##########################################################
-## Reset Manually Set Marianne Home Switch
-##########################################################
 
 - alias: Location - Reset Marianne Home Switch
 
@@ -155,10 +122,6 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.manual_marianne_home
 
-##########################################################
-## Manually Set Marianne Away
-##########################################################
-
 - alias: Location - Manually Set Marianne Away
 
   trigger:
@@ -172,10 +135,6 @@
       data:
         dev_id: marianne_mobile_phone
         location_name: 'not_home'
-
-##########################################################
-## Reset Manually Set Marianne Away Switch
-##########################################################
 
 - alias: Location - Reset Marianne Away Switch
 
