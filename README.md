@@ -16,7 +16,7 @@ Below is a list of some of the connected devices, this list excludes televisions
 * [Hue Bridge](https://tweakers.net/pricewatch/467641/philips-hue-bridge-20.html)
 * [Philips Hue White and Color E27 (2x)](https://tweakers.net/pricewatch/1115053/philips-hue-white-and-color-e27-25000-uur-806-lumen-duo-pack/specificaties/)
 * [Philips Hue White and Color E14 Candle (4x)](https://tweakers.net/pricewatch/746825/philips-hue-white-and-color-e14-candle.html)
-* [Philips Hue White E27](https://tweakers.net/pricewatch/467962/philips-hue-white-e27-single-pack.html)
+* [Philips Hue White E27 (2x)](https://tweakers.net/pricewatch/467962/philips-hue-white-e27-single-pack.html)
 * [Sonos Play:1 White](https://tweakers.net/pricewatch/1115053/philips-hue-white-and-color-e27-25000-uur-806-lumen-duo-pack/specificaties/)
 * [Synology DiskStation DS916+ (8GB)](https://tweakers.net/product/488469/synology-diskstation-ds916+/)
 
