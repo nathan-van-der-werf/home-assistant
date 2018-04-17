@@ -22,12 +22,12 @@
 
   action:
     - service: script.turn_on
-      entity_id: script.say
+      entity_id: script.sonos_say
       data:
         variables:
           master: 'media_player.gym'
           where: 'media_player.gym'
-          volume: '0.5'
+          volume: '0.3'
           what: 'Welcome home Nathan'
     - service: homeassistant.turn_off
       entity_id: input_boolean.nathan_greeting
@@ -53,12 +53,12 @@
 
   action:
     - service: script.turn_on
-      entity_id: script.say
+      entity_id: script.sonos_say
       data:
         variables:
           master: 'media_player.gym'
           where: 'media_player.gym'
-          volume: '0.5'
+          volume: '0.3'
           what: 'Welcome home Marianne'
     - service: homeassistant.turn_off
       entity_id: input_boolean.marianne_greeting
