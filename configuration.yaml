@@ -9,9 +9,7 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include includes/customize.yaml
-  customize_domain:
-    automation:
-      initial_state: 'on'
+  customize_domain: !include includes/customize_domain.yaml
 
 logger:
   default: debug
