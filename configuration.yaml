@@ -53,12 +53,6 @@ media_player:
   - platform: cast
     host: !secret media_player_cast_hosts
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts: !secret device_tracker_nmap_tracker_hosts
-    home_interval: 1
-    scan_options: "-F --host-timeout 1s"
-  - platform: gpslogger
 
 google_assistant:
   project_id: !secret google_assistant_project_id
@@ -70,6 +64,7 @@ google_assistant:
 ## Includes
 #################################################################
 automation: !include_dir_merge_list automation
+device_tracker: !include_dir_merge_list includes/device_tracker
 input_boolean: !include includes/input_boolean.yaml
 sensor: !include includes/sensors.yaml
 group: !include includes/groups.yaml
