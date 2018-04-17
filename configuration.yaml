@@ -50,13 +50,6 @@ hue:
       allow_hue_groups: false
       allow_unreachable: true
 
-media_player:
-  - platform: sonos
-    hosts: !secret media_player_sonos_hosts
-  - platform: cast
-    host: !secret media_player_cast_hosts
-
-
 google_assistant:
   project_id: !secret google_assistant_project_id
   client_id: !secret google_assistant_client_id
@@ -68,6 +61,7 @@ google_assistant:
 #################################################################
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list includes/device_tracker
+media_player: !include_dir_merge_list includes/media_players
 input_boolean: !include includes/input_boolean.yaml
 sensor: !include_dir_merge_list includes/sensors
 group: !include includes/groups.yaml

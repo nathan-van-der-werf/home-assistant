@@ -1,0 +1,2 @@
+- platform: sonos
+  hosts: !secret media_player_sonos_hosts
