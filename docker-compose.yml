@@ -1,7 +1,9 @@
-home-assistant:
-  image: homeassistant/home-assistant:0.67.0
-  container_name: home-assistant
-  restart: always
-  net: "host"
-  volumes:
-    - '/volume1/docker/homeassistant:/config'
+version: '3'
+services:
+  home-assistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant
+    volumes:
+      - /volume1/docker/home-assistant:/config
+    restart: always
+    network_mode: host
