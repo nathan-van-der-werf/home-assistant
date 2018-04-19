@@ -23,10 +23,6 @@ config:
 frontend:
   javascript_version: latest
 
-discovery:
-  ignore:
-    - sonos
-
 http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
@@ -49,6 +45,7 @@ google_assistant:
 
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list includes/device_tracker
+discovery: !include includes/discovery.yaml
 history: !include includes/history.yaml
 media_player: !include_dir_merge_list includes/media_players
 input_boolean: !include includes/input_boolean.yaml
