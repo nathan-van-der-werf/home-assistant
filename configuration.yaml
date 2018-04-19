@@ -58,3 +58,4 @@ light: !include_dir_merge_list includes/light_groups
 script: !include_dir_merge_named includes/scripts
 zone: !include includes/zones.yaml
 tts: !include_dir_merge_list includes/tts
+recorder: !include includes/recorder.yaml
