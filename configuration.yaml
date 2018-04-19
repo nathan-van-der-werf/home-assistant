@@ -23,7 +23,7 @@ sun:
 automation: !include_dir_merge_list component_configuration/automation
 device_tracker: !include_dir_merge_list component_configuration/device_tracker
 discovery: !include component_configuration/discovery.yaml
-frontend: !include component_configuration/frontend.yaml
+frontend: !include component_configuration/frontend/frontend.yaml
 google_assistant: !include component_configuration/google_assistant.yaml
 group: !include component_configuration/groups.yaml
 history: !include component_configuration/history.yaml
