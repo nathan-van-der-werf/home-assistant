@@ -9,7 +9,7 @@ homeassistant:
   customize_domain: !include includes/customize_domain.yaml
 
 logger:
-  default: debug
+  default: info
 
 updater:
   reporting: false
