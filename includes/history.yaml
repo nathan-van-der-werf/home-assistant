@@ -1,0 +1,6 @@
+exclude:
+  domains:
+    - automation
+    - input_boolean
+    - script
+    - media_player
