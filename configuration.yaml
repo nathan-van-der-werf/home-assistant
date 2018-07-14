@@ -21,6 +21,10 @@ map:
 sun:
 cloud:
 
+# Auto discovery components
+cast:
+
+# Custom configurations for components
 automation: !include_dir_merge_list component_configuration/automation
 device_tracker: !include_dir_merge_list component_configuration/device_tracker
 discovery: !include component_configuration/discovery.yaml
@@ -31,10 +35,10 @@ hue: !include component_configuration/hue.yaml
 input_boolean: !include component_configuration/input_boolean.yaml
 light: !include_dir_merge_list component_configuration/light_groups
 logger: !include component_configuration/logger.yaml
-media_player: !include_dir_merge_list component_configuration/media_players
 recorder: !include component_configuration/recorder.yaml
 script: !include_dir_merge_named component_configuration/scripts
 sensor: !include_dir_merge_list component_configuration/sensors
+sonos: !include component_configuration/sonos.yaml
 tts: !include_dir_merge_list component_configuration/tts
 updater: !include component_configuration/updater.yaml
 zone: !include component_configuration/zones.yaml

@@ -41,8 +41,7 @@
     view: yes
     icon: mdi:play-circle-outline
     entities:
-      - group.media_player
-      - group.sonos
+      - media_player.living_room_tv
 
   automation:
     name: Automation

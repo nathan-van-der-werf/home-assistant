@@ -9,6 +9,7 @@
 # Folders
 
 .cloud
+.storage
 /certificate
 /tts
 
